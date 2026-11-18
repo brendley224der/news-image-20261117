@@ -8,9 +8,15 @@
 
 import os
 import shutil
+import sys
 from pathlib import Path
 
-shutil.copyfile(
-    Path(__file__).resolve().parent / "entry.png",
-    Path(os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")) / "entry.png",
-)
+source = Path(__file__).resolve().parent / "entry.png"
+output_dir = Path(os.environ.get("MAKEFUN_OUTPUT_DIR", "/output"))
+output_dir.mkdir(parents=True, exist_ok=True)
+destination = output_dir / "entry.png"
+
+shutil.copyfile(source, destination)
+
+if not destination.is_file() or destination.stat().st_size != source.stat().st_size:
+    sys.exit("entry.png was not copied correctly to %s" % destination)
