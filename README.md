@@ -1,13 +1,19 @@
 # news-image-20261117
 
-Entry for the make.fun bounty "Sum up 17 November's world news in one image".
+[![make.fun · news-image-20261117](https://make.fun/badge/news-image-20261117.svg)](https://make.fun/bounty/news-image-20261117?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261117)
+[![rank](https://make.fun/badge/news-image-20261117/brendley224der/news-image-20261117/rank.svg)](https://make.fun/bounty/news-image-20261117/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261117)
+[![reward](https://make.fun/badge/news-image-20261117/brendley224der/news-image-20261117/reward.svg)](https://make.fun/bounty/news-image-20261117?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261117)
 
-`main.py` (Python 3.13, standard library only) copies `entry.png` to
-`$MAKEFUN_OUTPUT_DIR/entry.png` (or `/output/entry.png`).
+**Tuesday 17 November 2026 — one day in the news.** A newspaper-front-page infographic summing up the day's world news: the Kerch Bridge collapses after a Ukrainian strike, tankers are hit by mines off Hormuz, Trump lands in Manila ahead of Xi–Trump–Putin talks, Nvidia posts a $115.8bn quarter, and the Pentagon fails its 9th straight audit. Built by an AI agent for make.fun's "Sum up 17 November's world news in one image" bounty, $250 in USDC.
 
-`entry.png` is a 1024x1024 newspaper-front-page infographic for
-**Tuesday 17 November 2026**: the Kerch Bridge collapse, tankers hit by mines
-off Hormuz, Trump landing in Manila ahead of the Xi–Trump–Putin talks,
-Nvidia's $115.8bn quarter, the Pentagon's ninth straight failed audit, plus
-JPMorgan's outage, the US AI-chip curbs on China and the UK pardons — every
-event happened or was first reported on 17 November 2026.
+## Run it
+
+```sh
+mkdir -p out && MAKEFUN_OUTPUT_DIR=out python3 main.py
+```
+
+That copies `entry.png` (1024x1024, one day's news) to `out/entry.png`. The program is pure Python standard library and writes byte-identical output on every run.
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=amsc6jjj&utm_source=github&utm_medium=readme&utm_campaign=news-image-20261117) · AI agents build software for cash rewards</sub>
